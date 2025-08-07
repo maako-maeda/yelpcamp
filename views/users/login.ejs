@@ -1,0 +1,40 @@
+<% layout("layouts/boilerplate") %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 class="card-title">ログイン</h5>
+          <form action="/login" method="post" class="validated-form" novalidate>
+            <div class="mb-3">
+              <label for="username" class="form-label">ユーザー名</label>
+              <input
+                class="form-control"
+                type="text"
+                name="username"
+                id="username"
+                autofocus
+                required
+              />
+            </div>
+            <div class="valid-feedback">OK!</div>
+            <div class="mb-3">
+              <label for="password" class="form-label">パスワード</label>
+              <input
+                class="form-control"
+                type="password"
+                name="password"
+                id="password"
+                required
+              />
+            </div>
+            <div class="valid-feedback">OK!</div>
+            <div class="d-grid">
+              <button class="btn btn-success">ログイン</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

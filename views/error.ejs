@@ -1,0 +1,17 @@
+<% layout("layouts/boilerplate") %>
+  <div class="row">
+    <div class="offset-3" col-6>
+      <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">
+          <%= err.message %>
+        </h4>
+        <!-- 本番環境じゃない時のみerror.stackを出す -->
+        <% if (process.env.NODE_ENV !=="production" ) {%>
+          <p>
+            <%= err.stack %>
+          </p>
+          <% } %>
+            <hr />
+      </div>
+    </div>
+  </div>
